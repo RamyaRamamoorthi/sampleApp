@@ -1,0 +1,114 @@
+
+<html lang="en">
+    <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+    
+    <div class="container">
+      <div style="float: right;">
+        <button    class="btn btn-primary" (click)="logout()">Log Out</button>
+    </div>
+        <div style="text-align: center;">
+            <h2 >ABC Produts</h2>
+           </div>
+           
+           <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['products']">Prodcuts</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link" [routerLink]="['/about']">AboutUS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/contact']">Contact</a>
+              </li>
+              
+            </ul>
+          </nav>
+           
+          
+            <table class="table">
+             
+              <thead>
+                <tr>
+                  <th scope="col">ProductName</th>
+                  <th scope="col">Manufacture-Date</th>
+                  <th scope="col">Expiry-Date</th>
+                  <th scope="col">Brand</th>
+                  <th scope="col">Price</th>
+                </tr>
+              </thead>
+               
+              <tbody *ngFor="let content of array">
+                <tr>
+                  <th scope="row">{{content.ProductName}}</th>
+                  <td >{{content.ManufactureDate | date:'d/M/y'}}</td>
+                  <td>{{content.ExpiryDate | date:'d/M/y'}}</td>
+                  <td>{{content.Brand}}</td>
+                  <td>{{content.Price | currency:"INR":true}}</td>
+                </tr>
+              
+            </table>
+           
+           
+         
+          
+        
+
+
+
+
+
+
+    </div>
+    
+    </body>
+    </html>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

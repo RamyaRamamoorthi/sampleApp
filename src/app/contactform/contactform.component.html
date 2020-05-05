@@ -1,0 +1,28 @@
+<div>
+    <h2>  {{text}}</h2>
+   
+</div>
+<form id="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="form-group"> 
+ <label class="center-block">First Name: 
+     <input class="form-control" formControlName="fname"><br/><br/>
+ </label>
+ <label class="center-block">Last Name: 
+    <input class="form-control" formControlName="lname"><br/><br/>
+</label>
+<label class="center-block">AddressLine1: 
+    <input class="form-control" formControlName="text1"><br/><br/>
+</label>
+<label class="center-block">AddressLine2: 
+    <input class="form-control" formControlName="text2"><br/><br/>
+</label>
+<label class="center-block">Location: 
+    <input class="form-control" formControlName="location"><br/><br/>
+</label>
+
+
+    </div>
+<button type="submit"
+[disabled]="!contactForm.valid" class="btn btn-success">SUBMIT</button>
+</form>
+
